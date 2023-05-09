@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/back06.jpg');
+    background-image: url('/img/back06.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -37,7 +37,7 @@ nav a:hover {
 }
 
 .logo01 {
-    background-image: url('img/logo_trans.png');
+    background-image: url('/img/logo_trans.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 500px;
@@ -49,7 +49,7 @@ nav a:hover {
 }
 
 .logo02 {
-    background-image: url('img/schrift_trans.png');
+    background-image: url('/img/schrift_trans.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 500px;
@@ -58,13 +58,23 @@ nav a:hover {
     top: 750px;
     left: 950px;
    
+}
+.logo03 {
+        background-image: url('/img/logo_trans.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 500px;
+        width: 200px;
+        position: absolute;
+        top: 500px;
+        left: 1200px;
     }
 h1 {
-    color: rgb(81, 169, 223);
+    color: rgb(241, 195, 9);
     text-align: center;
 }
 p {
-color: rgb(81, 169, 223);
+color: rgb(6, 246, 218);
 text-align: center;
 }
 .cars {
