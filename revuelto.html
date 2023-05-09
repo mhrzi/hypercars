@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Revuelto Galerie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+
+    <style>
+      h1 {
+        color: rgb(210, 86, 25);
+        text-align: center;
+      }
+      p {
+        color: orange;
+        text-align: center;
+      }
+      .button01 {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #4c61af;
+			color: #fff;
+			text-align: center;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			position: absolute;
+			top: 75%;
+			left: 27%;
+			transform: translate(-50%, -50%);
+		}
+     .button02 {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #4c61af;
+			color: #fff;
+			text-align: center;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			position: absolute;
+			top: 75%;
+			left: 73%;
+			transform: translate(-50%, -50%);
+		}
+    </style>
+  </head>
+  <body>
+    <h1>Der Lamborghini Revuelto.</h1>
+    <br>
+    <p>Kurz vor dem 60. Jubiläum der Marke hat Lamborghini den Revuelto enthüllt:</p> 
+    <p>den ersten HPEV-Hybrid-Supersportwagen (High Performance Electrified Vehicle).</p> 
+    <p>Mit dem Revuelto hat Lamborghini neue Maßstäbe in Sachen Performance, Bordtechnologie und Fahrspaß gesetzt.</p> 
+    <p>Den ultimativen Nervenkitzel bietet der Revuelto dank einem Antriebsstrang mit insgesamt 1015 CV,</p> 
+    <p>der die geballte Leistung aus einem brandneuen 12-Zylinder-Verbrennungsmotor mit drei Elektromotoren</p> 
+    <p>und mit hoher Leistungsdichte und einem revolutionären quer eingebauten E-Doppelkupplungsgetriebe vereint.</p> 
+    <p>Die Hybridtechnik ist damit bestens gerüstet, um Performance und Fahremotionen auf eine bislang unerreichte Stufe zu heben. </p>
+    <br>
+    <br>
+    <br>
+    <a href="revuelto_slide.html" class="button01">Slideshow</a>
+    <a href="index.html" class="button02">Startseite</a>
+    
+  </body>
+    <style>
+        body {
+			background-image: url('img/back10.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+      
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .gallery img {
+        width: calc(33.33% - 10px);
+        margin-bottom: 80px;
+        cursor: pointer;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      .modal-content {
+        display: block;
+        margin: auto;
+        width: 80%;
+        max-width: 800px;
+        max-height: 80%;
+        margin-top: 20px;
+        margin-left: 500px;
+      }
+      .modal-content img {
+        display: block;
+        width: 200%;
+        height: auto;
+      }
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="gallery">
+      <img src="img/revuelto/revuelto01.jpg" onclick="openModal(this);">
+      <img src="img/revuelto/revuelto07.jpg" onclick="openModal(this);">
+      <img src="img/revuelto/revuelto03.jpg" onclick="openModal(this);">
+      <img src="img/revuelto/revuelto04.jpg" onclick="openModal(this);">
+      <img src="img/revuelto/revuelto05.jpg" onclick="openModal(this);">
+      <img src="img/revuelto/revuelto06.jpg" onclick="openModal(this);">
+    </div>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal();">&times;</span>
+      <div class="modal-content">
+        <img id="modal-img">
+      </div>
+    </div>
+
+    <script>
+      function openModal(img) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modal-img").src = img.src;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
